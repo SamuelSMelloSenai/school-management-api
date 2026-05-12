@@ -24,6 +24,9 @@ public class Aluno {
         this.dataNascimento = dataNascimento;
     }
 
+    public Aluno() {
+    }
+
     public long getId() {
         return id;
     }
