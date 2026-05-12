@@ -126,7 +126,7 @@ public class AlunoRepositoryImpl implements AlunoRepository {
                 }
             }
         }
-        throw new RuntimeException("Erro ao buscar existência do usuário!");
+        throw new RuntimeException("Erro ao buscar existência do aluno!");
     }
 
     public void atualizarAluno(Aluno aluno) throws SQLException {

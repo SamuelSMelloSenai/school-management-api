@@ -39,7 +39,7 @@ public class AlunoService {
     }
 
     public AlunoRespostaDTO buscarAlunoPorId(Long id) throws SQLException {
-        Aluno aluno = alunoRepository.buscarAlunoPorId(id).orElseThrow(() -> new RuntimeException("Erro ao encontrar usuario!"));
+        Aluno aluno = alunoRepository.buscarAlunoPorId(id).orElseThrow(() -> new RuntimeException("Erro ao encontrar aluno!"));
 
         return alunoMapper.paraResposta(aluno);
     }
