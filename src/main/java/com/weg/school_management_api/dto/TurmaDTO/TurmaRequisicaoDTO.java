@@ -6,8 +6,8 @@ import java.util.List;
 
 public record TurmaRequisicaoDTO(
         String nome,
-        long curso_id,
-        long professor_id,
-        List<Aluno> alunosIds
+        long cursoId,
+        long professorId,
+        List<Long> alunosIds
 ) {
 }

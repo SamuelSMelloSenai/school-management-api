@@ -24,6 +24,11 @@ public class Aluno {
         this.dataNascimento = dataNascimento;
     }
 
+    public Aluno(long id, String nome) {
+        this.id = id;
+        this.nome = nome;
+    }
+
     public Aluno() {
     }
 

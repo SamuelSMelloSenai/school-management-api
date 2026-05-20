@@ -1,8 +1,8 @@
 package com.weg.school_management_api.repository.professorRepository;
 
 import com.weg.school_management_api.infrastructure.ConnectionFactory;
+import com.weg.school_management_api.model.Curso;
 import com.weg.school_management_api.model.Professor;
-import com.weg.school_management_api.service.ProfessorService;
 import org.springframework.stereotype.Repository;
 
 import java.sql.*;
@@ -37,7 +37,7 @@ public class ProfessorRepositoryImpl implements ProfessorRepository {
         throw new RuntimeException("Erro ao cadastrar professor!");
     }
 
-    public List<Professor> buscarTodosOsProfessors() throws SQLException {
+    public List<Professor> buscarTodosOsProfessores() throws SQLException {
         List<Professor> professores = new ArrayList<>();
         String query = """
                 SELECT  id
@@ -57,6 +57,33 @@ public class ProfessorRepositoryImpl implements ProfessorRepository {
                         rs.getString("nome"),
                         rs.getString("email"),
                         rs.getString("disciplina")
+                );
+
+                professores.add(professor);
+            }
+            return professores;
+        }
+    }
+
+    public List<Professor> buscarTodosOsProfessoresDoCurso (Curso curso) throws SQLException {
+        List<Professor> professores = new ArrayList<>();
+        String query = """
+                SELECT   p.id As professorId
+                        ,p.nome AS nome
+                FROM curso_professor cp
+                JOIN professor p ON cp.professor_id = p.id
+                WHERE cp.curso_id = ?;
+                """;
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+            stmt.setLong(1, curso.getId());
+
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                var professor = new Professor (
+                        rs.getLong("professorId"),
+                        rs.getString("nome")
                 );
 
                 professores.add(professor);
@@ -148,4 +175,5 @@ public class ProfessorRepositoryImpl implements ProfessorRepository {
             stmt.executeUpdate();
         }
     }
+
 }

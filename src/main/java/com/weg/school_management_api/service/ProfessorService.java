@@ -7,10 +7,8 @@ import com.weg.school_management_api.model.Professor;
 import com.weg.school_management_api.repository.professorRepository.ProfessorRepository;
 import org.springframework.stereotype.Service;
 
-import javax.management.RuntimeMBeanException;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class ProfessorService {
@@ -32,7 +30,7 @@ public class ProfessorService {
     }
 
     public List<ProfessorRespostaDTO> buscarTodosOsProfessors () throws SQLException {
-        List<Professor> professores = professorRepository.buscarTodosOsProfessors();
+        List<Professor> professores = professorRepository.buscarTodosOsProfessores();
 
         return professores.stream().map(
                 professorMapper::paraResposta

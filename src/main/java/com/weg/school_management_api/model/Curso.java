@@ -16,6 +16,9 @@ public class Curso {
         this.codigo = codigo;
     }
 
+    public Curso() {
+    }
+
     public long getId() {
         return id;
     }

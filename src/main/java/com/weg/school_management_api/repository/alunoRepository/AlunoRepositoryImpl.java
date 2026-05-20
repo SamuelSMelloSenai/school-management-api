@@ -2,6 +2,7 @@ package com.weg.school_management_api.repository.alunoRepository;
 
 import com.weg.school_management_api.infrastructure.ConnectionFactory;
 import com.weg.school_management_api.model.Aluno;
+import com.weg.school_management_api.model.Turma;
 import org.springframework.stereotype.Repository;
 
 import java.sql.*;
@@ -160,6 +161,33 @@ public class AlunoRepositoryImpl implements AlunoRepository {
             stmt.setLong(1, id);
 
             stmt.executeUpdate();
+        }
+    }
+
+    public List<Aluno> buscarTodosOsAlunoDaTurma(Turma turma) throws SQLException {
+        List<Aluno> alunos = new ArrayList<>();
+        String query = """
+                SELECT   a.id AS alunoId
+                        ,a.nome AS nome
+                FROM turma_aluno ta
+                JOIN aluno a ON ta.aluno_id = a.id
+                WHERE ta.turma_id = ?;
+                """;
+        try (Connection conn = ConnectionFactory.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(query)) {
+            stmt.setLong(1, turma.getId());
+
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                var aluno = new Aluno(
+                        rs.getLong("alunoId"),
+                        rs.getString("nome")
+                );
+
+                alunos.add(aluno);
+            }
+            return alunos;
         }
     }
 }

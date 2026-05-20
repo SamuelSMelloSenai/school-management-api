@@ -1,7 +1,5 @@
 package com.weg.school_management_api.dto.TurmaDTO;
 
-import com.weg.school_management_api.model.Aluno;
-
 import java.util.List;
 
 public record TurmaRespostaDTO(
@@ -9,6 +7,6 @@ public record TurmaRespostaDTO(
         String nome,
         String nomeCurso,
         String nomeProfessor,
-        List<Aluno> alunosNomes
+        List<String> alunosNomes
 ) {
 }

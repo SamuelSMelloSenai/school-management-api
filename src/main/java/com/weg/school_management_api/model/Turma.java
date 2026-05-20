@@ -3,20 +3,23 @@ package com.weg.school_management_api.model;
 public class Turma {
     private long id;
     private String nome;
-    private long curso_id;
-    private long professor_id;
+    private long cursoId;
+    private long professorId;
 
-    public Turma(long id, String nome, long curso_id, long professor_id) {
+    public Turma(long id, String nome, long cursoId, long professorId) {
         this.id = id;
         this.nome = nome;
-        this.curso_id = curso_id;
-        this.professor_id = professor_id;
+        this.cursoId = cursoId;
+        this.professorId = professorId;
     }
 
-    public Turma(String nome, long curso_id, long professor_id) {
+    public Turma(String nome, long cursoId, long professorId) {
         this.nome = nome;
-        this.curso_id = curso_id;
-        this.professor_id = professor_id;
+        this.cursoId = cursoId;
+        this.professorId = professorId;
+    }
+
+    public Turma() {
     }
 
     public long getId() {
@@ -35,19 +38,19 @@ public class Turma {
         this.nome = nome;
     }
 
-    public long getCurso_id() {
-        return curso_id;
+    public long getCursoId() {
+        return cursoId;
     }
 
-    public void setCurso_id(long curso_id) {
-        this.curso_id = curso_id;
+    public void setCursoId(long cursoId) {
+        this.cursoId = cursoId;
     }
 
-    public long getProfessor_id() {
-        return professor_id;
+    public long getProfessorId() {
+        return professorId;
     }
 
-    public void setProfessor_id(long professor_id) {
-        this.professor_id = professor_id;
+    public void setProfessorId(long professorId) {
+        this.professorId = professorId;
     }
 }
