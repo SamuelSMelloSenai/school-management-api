@@ -1,6 +1,4 @@
-package com.weg.school_management_api.dto.TurmaDTO;
-
-import com.weg.school_management_api.model.Aluno;
+package com.weg.school_management_api.dto.turma;
 
 import java.util.List;
 

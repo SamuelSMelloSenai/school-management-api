@@ -1,4 +1,4 @@
-package com.weg.school_management_api.dto.alunoDTO;
+package com.weg.school_management_api.dto.aluno;
 
 import java.time.LocalDate;
 

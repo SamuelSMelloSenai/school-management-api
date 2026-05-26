@@ -1,7 +1,7 @@
 package com.weg.school_management_api.controller;
 
-import com.weg.school_management_api.dto.professorDTO.ProfessorRequisicaoDTO;
-import com.weg.school_management_api.dto.professorDTO.ProfessorRespostaDTO;
+import com.weg.school_management_api.dto.professor.ProfessorRequisicaoDTO;
+import com.weg.school_management_api.dto.professor.ProfessorRespostaDTO;
 import com.weg.school_management_api.model.Professor;
 import com.weg.school_management_api.service.ProfessorService;
 import org.springframework.web.bind.annotation.*;

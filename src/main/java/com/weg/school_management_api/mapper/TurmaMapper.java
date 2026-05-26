@@ -1,7 +1,7 @@
 package com.weg.school_management_api.mapper;
 
-import com.weg.school_management_api.dto.TurmaDTO.TurmaRequisicaoDTO;
-import com.weg.school_management_api.dto.TurmaDTO.TurmaRespostaDTO;
+import com.weg.school_management_api.dto.turma.TurmaRequisicaoDTO;
+import com.weg.school_management_api.dto.turma.TurmaRespostaDTO;
 import com.weg.school_management_api.model.Turma;
 import org.springframework.stereotype.Component;
 

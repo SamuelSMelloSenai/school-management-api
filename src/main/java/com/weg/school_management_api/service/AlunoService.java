@@ -1,7 +1,7 @@
 package com.weg.school_management_api.service;
 
-import com.weg.school_management_api.dto.alunoDTO.AlunoRequisicaoDTO;
-import com.weg.school_management_api.dto.alunoDTO.AlunoRespostaDTO;
+import com.weg.school_management_api.dto.aluno.AlunoRequisicaoDTO;
+import com.weg.school_management_api.dto.aluno.AlunoRespostaDTO;
 import com.weg.school_management_api.mapper.AlunoMapper;
 import com.weg.school_management_api.model.Aluno;
 import com.weg.school_management_api.repository.alunoRepository.AlunoRepository;
@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class AlunoService {

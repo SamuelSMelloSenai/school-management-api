@@ -1,7 +1,7 @@
 package com.weg.school_management_api.controller;
 
-import com.weg.school_management_api.dto.alunoDTO.AlunoRequisicaoDTO;
-import com.weg.school_management_api.dto.alunoDTO.AlunoRespostaDTO;
+import com.weg.school_management_api.dto.aluno.AlunoRequisicaoDTO;
+import com.weg.school_management_api.dto.aluno.AlunoRespostaDTO;
 import com.weg.school_management_api.model.Aluno;
 import com.weg.school_management_api.service.AlunoService;
 import org.springframework.web.bind.annotation.*;

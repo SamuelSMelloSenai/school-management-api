@@ -1,7 +1,7 @@
 package com.weg.school_management_api.controller;
 
-import com.weg.school_management_api.dto.TurmaDTO.TurmaRequisicaoDTO;
-import com.weg.school_management_api.dto.TurmaDTO.TurmaRespostaDTO;
+import com.weg.school_management_api.dto.turma.TurmaRequisicaoDTO;
+import com.weg.school_management_api.dto.turma.TurmaRespostaDTO;
 import com.weg.school_management_api.model.Turma;
 import com.weg.school_management_api.service.TurmaService;
 import org.springframework.web.bind.annotation.*;

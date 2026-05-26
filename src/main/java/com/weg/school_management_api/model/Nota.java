@@ -2,21 +2,24 @@ package com.weg.school_management_api.model;
 
 public class Nota {
     private long id;
-    private long aluno_id;
-    private long aula_id;
+    private long alunoId;
+    private long aulaId;
     private float valor;
 
-    public Nota(long id, long aluno_id, long aula_id, float valor) {
+    public Nota(long id, long alunoId, long aulaId, float valor) {
         this.id = id;
-        this.aluno_id = aluno_id;
-        this.aula_id = aula_id;
+        this.alunoId = alunoId;
+        this.aulaId = aulaId;
         this.valor = valor;
     }
 
-    public Nota(long aluno_id, long aula_id, float valor) {
-        this.aluno_id = aluno_id;
-        this.aula_id = aula_id;
+    public Nota(long alunoId, long aulaId, float valor) {
+        this.alunoId = alunoId;
+        this.aulaId = aulaId;
         this.valor = valor;
+    }
+
+    public Nota() {
     }
 
     public long getId() {
@@ -27,20 +30,20 @@ public class Nota {
         this.id = id;
     }
 
-    public long getAluno_id() {
-        return aluno_id;
+    public long getAlunoId() {
+        return alunoId;
     }
 
-    public void setAluno_id(long aluno_id) {
-        this.aluno_id = aluno_id;
+    public void setAlunoId(long alunoId) {
+        this.alunoId = alunoId;
     }
 
-    public long getAula_id() {
-        return aula_id;
+    public long getAulaId() {
+        return aulaId;
     }
 
-    public void setAula_id(long aula_id) {
-        this.aula_id = aula_id;
+    public void setAulaId(long aulaId) {
+        this.aulaId = aulaId;
     }
 
     public float getValor() {

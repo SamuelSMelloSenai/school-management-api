@@ -98,8 +98,6 @@ public class TurmaRepositoryImpl implements TurmaRepository {
                 Turma turma = new Turma();
                 turma.setId(rs.getLong("id"));
                 turma.setNome(rs.getString("nome"));
-
-                // ESTAS LINHAS SÃO OBRIGATÓRIAS NO SEU REPOSITÓRIO DE TURMA:
                 turma.setCursoId(rs.getLong("curso_id"));
                 turma.setProfessorId(rs.getLong("professor_id"));
 

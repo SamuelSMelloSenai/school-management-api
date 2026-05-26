@@ -1,4 +1,4 @@
-package com.weg.school_management_api.dto.professorDTO;
+package com.weg.school_management_api.dto.professor;
 
 public record ProfessorRespostaDTO(
         long id,

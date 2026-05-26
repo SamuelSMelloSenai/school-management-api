@@ -1,7 +1,7 @@
 package com.weg.school_management_api.controller;
 
-import com.weg.school_management_api.dto.cursoDTO.CursoRequisicaoDTO;
-import com.weg.school_management_api.dto.cursoDTO.CursoRespostaDTO;
+import com.weg.school_management_api.dto.curso.CursoRequisicaoDTO;
+import com.weg.school_management_api.dto.curso.CursoRespostaDTO;
 import com.weg.school_management_api.model.Curso;
 import com.weg.school_management_api.service.CursoService;
 import org.springframework.web.bind.annotation.*;

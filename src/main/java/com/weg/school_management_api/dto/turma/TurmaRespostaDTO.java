@@ -1,4 +1,4 @@
-package com.weg.school_management_api.dto.TurmaDTO;
+package com.weg.school_management_api.dto.turma;
 
 import java.util.List;
 

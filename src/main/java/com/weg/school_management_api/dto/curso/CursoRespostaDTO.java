@@ -1,4 +1,4 @@
-package com.weg.school_management_api.dto.cursoDTO;
+package com.weg.school_management_api.dto.curso;
 
 import java.util.List;
 

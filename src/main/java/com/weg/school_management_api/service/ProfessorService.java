@@ -1,7 +1,7 @@
 package com.weg.school_management_api.service;
 
-import com.weg.school_management_api.dto.professorDTO.ProfessorRequisicaoDTO;
-import com.weg.school_management_api.dto.professorDTO.ProfessorRespostaDTO;
+import com.weg.school_management_api.dto.professor.ProfessorRequisicaoDTO;
+import com.weg.school_management_api.dto.professor.ProfessorRespostaDTO;
 import com.weg.school_management_api.mapper.ProfessorMapper;
 import com.weg.school_management_api.model.Professor;
 import com.weg.school_management_api.repository.professorRepository.ProfessorRepository;

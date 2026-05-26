@@ -1,10 +1,9 @@
 package com.weg.school_management_api.service;
 
-import com.weg.school_management_api.dto.TurmaDTO.TurmaRequisicaoDTO;
-import com.weg.school_management_api.dto.TurmaDTO.TurmaRespostaDTO;
+import com.weg.school_management_api.dto.turma.TurmaRequisicaoDTO;
+import com.weg.school_management_api.dto.turma.TurmaRespostaDTO;
 import com.weg.school_management_api.mapper.TurmaMapper;
 import com.weg.school_management_api.model.Aluno;
-import com.weg.school_management_api.model.Curso;
 import com.weg.school_management_api.model.Turma;
 import com.weg.school_management_api.repository.alunoRepository.AlunoRepository;
 import com.weg.school_management_api.repository.cursoRepository.CursoRepository;
@@ -15,7 +14,6 @@ import org.springframework.stereotype.Service;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class TurmaService {

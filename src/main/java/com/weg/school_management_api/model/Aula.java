@@ -1,24 +1,27 @@
 package com.weg.school_management_api.model;
 
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 public class Aula {
     private long id;
-    private long turma_id;
-    private LocalTime data_hora;
+    private long turmaId;
+    private LocalDateTime dataHora;
     private String assunto;
 
-    public Aula(long id, long turma_id, LocalTime data_hora, String assunto) {
+    public Aula(long id, long turmaId, LocalDateTime dataHora, String assunto) {
         this.id = id;
-        this.turma_id = turma_id;
-        this.data_hora = data_hora;
+        this.turmaId = turmaId;
+        this.dataHora = dataHora;
         this.assunto = assunto;
     }
 
-    public Aula(long turma_id, LocalTime data_hora, String assunto) {
-        this.turma_id = turma_id;
-        this.data_hora = data_hora;
+    public Aula(long turmaId, LocalDateTime dataHora, String assunto) {
+        this.turmaId = turmaId;
+        this.dataHora = dataHora;
         this.assunto = assunto;
+    }
+
+    public Aula() {
     }
 
     public long getId() {
@@ -29,20 +32,20 @@ public class Aula {
         this.id = id;
     }
 
-    public long getTurma_id() {
-        return turma_id;
+    public long getTurmaId() {
+        return turmaId;
     }
 
-    public void setTurma_id(long turma_id) {
-        this.turma_id = turma_id;
+    public void setTurmaId(long turmaId) {
+        this.turmaId = turmaId;
     }
 
-    public LocalTime getData_hora() {
-        return data_hora;
+    public LocalDateTime getDataHora() {
+        return dataHora;
     }
 
-    public void setData_hora(LocalTime data_hora) {
-        this.data_hora = data_hora;
+    public void setDataHora(LocalDateTime dataHora) {
+        this.dataHora = dataHora;
     }
 
     public String getAssunto() {
